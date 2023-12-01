@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway&display=swap");
+
+.artwork-div {
+  padding: 15px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.artwork-image {
+  margin: 1.2rem 0 1.2rem 0;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.info-text{
+    display: flex;
+}
+
+.info {
+
+  h3 {
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 1px;
+  }
+
+  h5 {
+    position: absolute;
+    font-weight: 600;
+    transition: color 0.3s, font-size 0.3s;
+  }
+  h5:hover {
+    color: aqua;
+    font-size: 17px;
+  }
+
+  p {
+    margin-top: 40px;
+  }
+}
+
+.write-comment {
+  display: flex;
+  flex-direction: column;
+  input {
+    background-color: #1a1a1a;
+    max-width: 100%;
+  }
+  button {
+    margin: 10px;
+    text-align: end;
+  }
+}
+
+.comment-box {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  background: url(https://media3.giphy.com/media/pWhWtKdqwOAco/giphy.gif?cid=ecf05e473cz0z3vzj8xmp8sl8vw01ugk6941ihua6132qmb4&ep=v1_gifs_search&rid=giphy.gif&ct=g);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.your-comment {
+  margin: 1.2rem 0;
+  padding: 10px;
+
+  h5{
+    margin: 10px 10px 10px 0;
+    font-weight: 600;
+  }
+  p {
+    border: 1px solid rgb(0, 174, 255);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.437);
+  }
+}

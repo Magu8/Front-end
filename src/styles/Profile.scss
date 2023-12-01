@@ -1,0 +1,233 @@
+@import "./_variables";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway&display=swap");
+
+.profile-div {
+  font-family: "Montserrat", sans-serif;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 10px;
+}
+
+.profile-name {
+  display: flex;
+  align-items: baseline;
+
+  &.my-profile {
+    span {
+      color: $myprofile;
+    }
+  }
+  h2 {
+    font-size: 35px;
+  }
+  span {
+    color: $profile;
+    font-size: 50px;
+  }
+}
+
+.active-username {
+  font-weight: bold;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.profile-content {
+  &.my-profile-content {
+    &::before {
+      background-image: linear-gradient($myprofile, rgb(16, 16, 16)),
+        linear-gradient(rgb(16, 16, 16), rgb(16, 16, 16)),
+        linear-gradient(rgb(16, 16, 16), $myprofile),
+        linear-gradient(rgb(16, 16, 16), rgb(16, 16, 16));
+    }
+  }
+
+  position: relative;
+  z-index: 0;
+  width: 750px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: rgb(16, 16, 16);
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 50% 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image: linear-gradient($profile, rgb(16, 16, 16)),
+      linear-gradient(rgb(16, 16, 16), rgb(16, 16, 16)),
+      linear-gradient(rgb(16, 16, 16), $profile),
+      linear-gradient(rgb(16, 16, 16), rgb(16, 16, 16));
+    animation: rotate 4s linear infinite;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 3px;
+    top: 3px;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    background-color: rgb(16, 16, 16);
+    border-radius: 5px;
+  }
+}
+
+@keyframes opacityChange {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.profile-content {
+  background-color: rgba(0, 0, 0, 0.552);
+
+  .profile-data {
+    display: flex;
+    font-size: 30px;
+
+    .photo-follow {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+.profile-photo {
+  padding: 10px;
+  margin: 10px;
+  min-width: 343px;
+  min-height: 343px;
+  max-width: 343px;
+  max-height: 343px;
+  object-fit: cover;
+}
+
+.follow-section {
+  display: flex;
+  text-align: center;
+  p {
+    font-size: 20px;
+    margin: 10px;
+  }
+}
+
+.profile-bio {
+  padding: 18px;
+  h3 {
+    font-size: 35px;
+    margin: 0 0 30px 0;
+  }
+
+  h4 {
+    margin: 30px 0 0 0;
+  }
+  p {
+    font-size: 15px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+}
+
+.gallery,
+.favorites {
+  text-align: center;
+  font-size: 30px;
+  margin: 40px;
+}
+
+.buttons-div {
+  display: flex;
+  justify-content: center;
+  button {
+    margin: 30px;
+  }
+}
+
+.border {
+  margin: 20px;
+}
+
+.profile-faveArt,
+.profile-ownArt {
+  margin: 40px;
+  text-align: center;
+}
+
+.ownart-div,
+.faveart-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.ownart,
+.faveart {
+  margin: 10px;
+
+  button {
+    position: absolute;
+  }
+}
+
+.stargaze-button:hover,
+.stargaze-button:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+}
+
+@keyframes stargaze-button {
+  0% {
+    box-shadow: 0 0 0 0 245, 239, 120;
+  }
+}
+
+.follow-buttons {
+  button {
+    color: rgb(245, 239, 120);
+    transition: 0.25s;
+    &:hover,
+    &:focus {
+      border-color: rgb(245, 239, 120);
+      color: #fff;
+    }
+  }
+}
+
+.follow-buttons {
+  button {
+    background: none;
+    border: 2px solid;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 3px;
+  }
+}
+
+.followthis {
+  position: relative;
+  bottom: 10px;
+}
+
+.profile-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
