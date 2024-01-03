@@ -29,7 +29,7 @@ export default function Main() {
       {!activeUser ? (
         <div className="intro-noUser">
           <h1>Welcome to the <span>Galaxlery</span></h1>
-          <h4>Where artist are made up of stardust</h4>
+          <h4>where artist are made up of stardust</h4>
           <h3>Check out what make our artists shine</h3>
         </div>
       ) : (
